@@ -1,0 +1,138 @@
+.hero {
+    background-image: url(../images/img02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    position: relative;
+
+    &__container {
+        max-width: 90%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &::before { 
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .2; 
+    }
+
+    &__title {
+        color: #fff;
+        text-align: center;
+        font-family: 'Kaushan Script', cursive;
+    }
+
+    &__text {
+        color: #fff;
+        text-align: center;
+        margin: 24px 0;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+
+    .infosbar {
+        background-color: #fff;
+        padding: 16px 24px;
+        border-radius: 2px;
+
+        &__infos {
+            &__item {
+                margin-bottom: 24px;
+                font-size: 14px;
+                list-style: none;
+
+                b {
+                    display: block;
+                    font-size: 18px;
+                }
+            }
+
+            &__button {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                padding: 12px;
+                font-size: 18px;
+                font-weight: bold;
+                text-decoration: none;
+                border-radius: 5px;
+                color: #fff;
+                background-color: rgb(0, 68, 255);
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__text {
+            font-size: 22px;
+        }
+
+        .infosbar {
+            &__infos {
+                &__item {
+                    font-size: 16px;
+        
+                    b {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__text {
+            margin: 64px 0;
+            font-size: 40px;
+            line-height: 56px;
+        }
+
+        .infosbar {
+            display: flex;
+            justify-content: space-between;
+            
+            &__infos {
+                display: flex;
+                gap: 10px;
+
+                &__item {
+                    margin: 0;
+                }
+
+                &__button {
+                    width: 200px;
+                    height: 50px;
+                    white-space: nowrap;
+                    
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 1440px) {
+        padding-top: 64px;
+        padding-bottom: 100px;
+
+        &__container {
+            max-width: 960px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (min-width: 2560px) {
+        padding-top: 150px;
+        padding-bottom: 200px;
+    }     
+        
+}
